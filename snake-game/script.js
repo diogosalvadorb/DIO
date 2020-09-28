@@ -23,7 +23,25 @@ function criarCobra(){
 
 function iniciarJogo(){
     criarBG();
-    criarCobra();
-     
+    criarCobra();    
+
+    let snakeX = snake[0].x; 
+    let snakeY = snake[0].y;
+
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeY -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "down") snakeX += box;
+
+    snake.pop();
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    }
+
+    snake.unshift(newHead);
 }
+
+let jogo = setInterval(iniciarJogo, 100);
 
