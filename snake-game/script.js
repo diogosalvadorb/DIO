@@ -27,7 +27,7 @@ function criarCobra(){
 
 function drawFood(){
     context.fillStyle = "red";
-    context.fillRect()
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -48,6 +48,7 @@ function iniciarJogo(){
 
     criarBG();
     criarCobra();    
+    drawFood();
 
     let snakeX = snake[0].x; 
     let snakeY = snake[0].y;
