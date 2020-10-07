@@ -46,3 +46,11 @@ body {
   background: rgb(92, 187, 182);
   backface-visibility: hidden; 
 }
+
+.card-front {
+    transform: rotateY(180deg); 
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
